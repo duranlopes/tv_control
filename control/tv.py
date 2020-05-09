@@ -31,25 +31,25 @@ class Tv:
         try:
             self.remote.control('KEY_CHUP')
         except:
-            return {'error'}
+            return {'error channel up'}
 
     def channel_down(self):
         try:
             self.remote.control('KEY_CHDOWN')
         except:
-            return {'error'}
+            return {'error channel down'}
 
     def poweroff(self):
         try:
             self.remote.control('KEY_POWEROFF')
         except:
-            return {'error_off'}
+            return {'error off'}
 
     def mute(self):
         try:
             self.remote.control('KEY_MUTE')
         except:
-            return {'error_mute'}
+            return {'error mute'}
 
 
 
