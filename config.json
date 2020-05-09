@@ -1,0 +1,9 @@
+{
+    "name": "python-app",
+    "description": "python",
+    "id": "BC:8C:CD:30:8B:9B",
+    "host": "192.168.25.108",
+    "port": 55000,
+    "method": "legacy",
+    "timeout": 0
+}
