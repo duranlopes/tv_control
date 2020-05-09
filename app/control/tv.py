@@ -1,11 +1,7 @@
-
-import os
-import sys
 import json
 import samsungctl
 
-DIR_NAME = os.path.dirname(os.path.realpath(sys.argv[0]))
-CONFIG_PATH = os.path.join(DIR_NAME, 'config.json')
+CONFIG_PATH = './app/config.json'
 
 with open(CONFIG_PATH) as data:
     config_data = json.load(data)
@@ -15,25 +11,25 @@ class Tv:
     def __init__(self):
         self.remote = samsungctl.Remote(config_data)
  
-    def up_volume(self):
+    async def up_volume(self):
         try:
             self.remote.control('KEY_VOLUP')
         except:
             return {'error volume up'}
 
-    def down_volume(self):
+    async def down_volume(self):
         try:
             self.remote.control('KEY_VOLDOWN')
         except:
             return {'error volume down'}
 
-    def channel_up(self):
+    async def channel_up(self):
         try:
             self.remote.control('KEY_CHUP')
         except:
             return {'error channel up'}
 
-    def channel_down(self):
+    async def channel_down(self):
         try:
             self.remote.control('KEY_CHDOWN')
         except:

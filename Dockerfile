@@ -1,7 +1,15 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+FROM python:3-slim
 
-COPY . /app
+LABEL maintainer='Duran Lopes'
+
+ADD . /app
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+ENV PYTHONUNBUFEFERED 1
+
+RUN pip install pip --upgrade && pip install -r requirements.txt
+
+EXPOSE 80
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]

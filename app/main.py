@@ -1,9 +1,13 @@
 from fastapi import FastAPI
-from control.tv import Tv
 import uvicorn
+try:
+    from control.tv import Tv
+except:
+    from .control.tv import Tv
 
 app = FastAPI()
-tv =Tv()
+tv = Tv()
+
 
 @app.post("/volume/{option}", tags=['Volume control'])
 def volume(option: str):
@@ -23,6 +27,7 @@ def volume(option: str):
         return {'volume down'}
     else:
         tv.mute()
+
 
 @app.post("/channel/{option}", tags=['Channel control'])
 def channel(option: str):
@@ -50,4 +55,4 @@ def poweroff_tv():
 
 if __name__ == '__main__':
     uvicorn.run("main:app", host="0.0.0.0", port=5000,
-                log_level="info", debug=True)
+               log_level="info", debug=True)
