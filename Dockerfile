@@ -6,7 +6,9 @@ ADD . /app
 
 WORKDIR /app
 
-ENV PYTHONUNBUFEFERED 1
+ENV PYTHONUNBUFEFERED 1 
+ENV TV_IP 192.168.25.102
+ENV TV_MAC_ADDRESS BC:8C:CD:30:8B:9B
 
 RUN pip install pip --upgrade && pip install -r requirements.txt
 

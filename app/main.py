@@ -1,13 +1,9 @@
 from fastapi import FastAPI
 import uvicorn
-try:
-    from control.tv import Tv
-except:
-    from .control.tv import Tv
+from .tv import Tv
 
 app = FastAPI()
 tv = Tv()
-
 
 @app.post("/volume/{option}", tags=['Volume control'])
 def volume(option: str):
@@ -21,7 +17,6 @@ def volume(option: str):
     if option == 'up':
         tv.up_volume()
         return {'volume up'}
-
     elif option == 'down':
         tv.down_volume()
         return {'volume down'}
