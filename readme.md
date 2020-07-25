@@ -19,3 +19,12 @@ Acess:
 
 *  http://localhost/docs
 
+Samples:
+--------
+
+1- Swagger by fastapi
+<img src="samples/fastapi.png">
+
+1- Volume example
+<img src="samples/volume_up_example.png">
+
