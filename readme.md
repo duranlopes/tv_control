@@ -28,3 +28,16 @@ Samples:
 1- Volume example
 <img src="samples/volume_up_example.png">
 
+
+IOS Shortcut
+------------
+
+To integrate the API with Siri, I created a shortcut that sends a post method to the API with the command.
+
+[Shortcut sample](https://www.icloud.com/shortcuts/485481e2b74a4b6b9c0a18e8a3f1329f)
+
+* `Edit the shortcut and enter your api's ip.`
+
+
+<img src="samples/ios_shotcut.jpeg">
+
