@@ -1,21 +1,21 @@
-# Samsung tv control API
+Samsung tv control API
+----------------------
 
-Utilizando o modulo `samsuntctl` e `fast api`, criei uma RESTFull API para controles simples de TV`s Samsung.
+Using the `samsuntctl` and` fast api` module, I created a RESTFull api for simple Samsung TV`s controls.
 
+Installation:
+------------
 
-## Installation:
+* Enter the tv ip and mac address in the Dockerfile or use config.json
 
-* Alterar o arquivo config.json com o IP da sua TV e Macaddress da mesma.
-
-## Usage:
-
-```bash
-Docker build . 
-```
+How to usage:
+------------
 
 ```bash
 docker-compose -f "docker-compose.yml" up -d --build
 ```
+
+Acess:
 
 *  http://localhost/docs
 
