@@ -1,5 +1,5 @@
 ﻿click==7.1.2
-fastapi==0.54.1
+fastapi==0.65.2
 h11==0.9.0
 pycodestyle==2.5.0
 pydantic==1.5.1
